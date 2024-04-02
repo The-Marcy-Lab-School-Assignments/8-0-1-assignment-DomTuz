@@ -25,7 +25,11 @@ const logRoutes = (req, res, next) => {
 const serveStatic = express.static(pathToDistFolder);
 
 // "Response" controllers send data to the client
-const serveData = (req, res, next) => res.send(`<h1>Hello World</h1>`);
+const serveData = (req, res) => {
+  // Example response data.
+  const data = { message: "This is some data from the API." };
+  res.json(data);
+};
 const serveHello = (req, res, next) => {
   const name = req.query.name || "stranger";
   res.send(`hello ${name}`);
