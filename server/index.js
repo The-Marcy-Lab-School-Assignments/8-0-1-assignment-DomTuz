@@ -42,7 +42,7 @@ app.use(serveStatic);
 app.get('/api/hello', serveHello);
 app.get('/api/data', serveData);
 
-const port = 8080;
+const port = 8081;
 app.listen(port, () => {
   console.log(`Server is now running on http://localhost:${port}`);
 });
